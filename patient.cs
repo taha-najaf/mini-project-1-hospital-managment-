@@ -13,7 +13,7 @@ namespace mini_project_1_hospital_managment_
         public long id = 0;
         public string sickness = "";
         public string doctor = "";
-        public string room_number = "";
+        public string room_number = " ";
 
     }
 }
