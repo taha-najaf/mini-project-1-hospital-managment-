@@ -10,7 +10,17 @@ namespace mini_project_1_hospital_managment_
     {
         static void Main(string[] args)
         {
-            int patient_count = 0, nurse_count = 0, doctor_count = 0;
+            int d=2,n=2,p=0;//d for doctor,n for nurses ,p for patient counter
+            //defualt doctors + doctor arr
+            Doctor []doctors=new Doctor[200];
+            doctors[0] = new Doctor("Mohammad","Amiri",8962, "heart specialist", 20);
+            doctors[1] = new Doctor("Amir", "Mohammadi", 8932, "Neurologist", 30);
+            //defult nurses + nurse arr
+            Nurse[] nurses = new Nurse[200];
+            nurses[0] = new Nurse("Azita", "Soufian", 6432);
+            nurses[1] = new Nurse("Parisa", "Nabavi", 6481);
+            //patient arr
+            Patient[] patients = new Patient[200];
             //============================ base menu
             while (true)
             {
@@ -28,21 +38,24 @@ namespace mini_project_1_hospital_managment_
                     if (username == admin.username && password == admin.password)
                         Console.WriteLine("correct!");
                     else
+                    {
                         Console.WriteLine("username or password is wrong");
+                        continue;
+                    }
                     ///========= abilities of admin
                     Console.WriteLine("1.Add a patient(a)\n2.List of patients(p)\n3.List of doctors(d)\n3.List of nurses(n)\n5.Exit(e)");
                     choose = Console.ReadLine();
                     //========= add patient
                     if (choose == "a")
                     {
-                        Patient patient = new Patient();
-                        Console.WriteLine("First Name: "); patient.firstname = Console.ReadLine();
-                        Console.WriteLine("Last Name: "); patient.lastname = Console.ReadLine();
-                        Console.WriteLine("Id: "); patient.Id = int.Parse(Console.ReadLine());
-                        Console.WriteLine("Sickness: "); patient.sickness = Console.ReadLine();
-                        Console.WriteLine("Doctor: "); patient.doctor = Console.ReadLine();
-                        Console.WriteLine("Room Number"); patient.Room_number = int.Parse(Console.ReadLine());
-                        patient_count++;
+                        patients[p] = new Patient();
+                        Console.WriteLine("First Name: "); patients[p].firstname = Console.ReadLine();
+                        Console.WriteLine("Last Name: "); patients[p].lastname = Console.ReadLine();
+                        Console.WriteLine("Id: "); patients[p].Id = int.Parse(Console.ReadLine());
+                        Console.WriteLine("Sickness: "); patients[p].sickness = Console.ReadLine();
+                        Console.WriteLine("Doctor: "); patients[p].doctor = Console.ReadLine();
+                        Console.WriteLine("Room Number"); patients[p].Room_number = int.Parse(Console.ReadLine());
+                        p++;
                         Console.WriteLine("Patient added successfully!");
                     }
                     else if (choose == "p")
