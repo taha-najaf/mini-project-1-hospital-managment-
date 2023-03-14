@@ -43,7 +43,7 @@ namespace mini_project_1_hospital_managment_
                         continue;
                     }
                     ///========= abilities of admin
-                    Console.WriteLine("1.Add a patient(a)\n2.List of patients(p)\n3.List of doctors(d)\n3.List of nurses(n)\n5.Exit(e)");
+                    Console.WriteLine("1.Add a patient(a)\n2.List of patients(p)\n3.Add a doctor(b)\n4.List of doctors(d)\n5.Add a nurse(c)\n6.List of nurses(n)\n7.Exit(e)");
                     choose = Console.ReadLine();
                     //========= add patient
                     if (choose == "a")
@@ -57,12 +57,34 @@ namespace mini_project_1_hospital_managment_
                         Console.WriteLine("Room Number"); patients[p].Room_number = int.Parse(Console.ReadLine());
                         p++;
                         Console.WriteLine("Patient added successfully!");
-                    }
+                    } // list of patient
                     else if (choose == "p")
                     {
 
                     }
+                    // add doctor
+                    else if(choose=="b")
+                    {
+                        Console.WriteLine("Enter firstname: "); string firstname = Console.ReadLine();
+                        Console.WriteLine("Last Name: ");       string lastname = Console.ReadLine();
+                        Console.WriteLine("Id: ");              int id = int.Parse(Console.ReadLine());
+                        Console.WriteLine("Speciality: ");      string speciality = Console.ReadLine();
+                        Console.WriteLine("record: ");          int record = int.Parse(Console.ReadLine());
+                        doctors[d] = new Doctor(firstname,lastname,id,speciality,record);
+                        d++;
+                        Console.WriteLine("Doctor added successfully!");
+                    }//list of doctor 
                     else if (choose == "d") { }
+                    //add nurse
+                    else if (choose=="c")
+                    {
+                        Console.WriteLine("Enter firstname: "); string firstname = Console.ReadLine();
+                        Console.WriteLine("Last Name: "); string lastname = Console.ReadLine();
+                        Console.WriteLine("Id: "); int id = int.Parse(Console.ReadLine());
+                        nurses[n]=new Nurse(firstname,lastname,id);
+                        n++;
+                        Console.WriteLine("Nurse added successfully!");
+                    }// list of nurse 
                     else if (choose == "n") { }
                     else if (choose == "e") { break; }
 
