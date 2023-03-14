@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,6 +11,10 @@ namespace mini_project_1_hospital_managment_
     {
         static void Main(string[] args)
         {
+            // add persian time
+            DateTime now = DateTime.Now;
+            Console.WriteLine(now.ToPersianDateTime());
+            //===============
             int d=2,n=2,p=0;//d for doctor,n for nurses ,p for patient counter
             //defualt doctors + doctor arr
             Doctor []doctors=new Doctor[200];

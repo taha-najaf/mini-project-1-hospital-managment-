@@ -47,6 +47,7 @@
     <Compile Include="Doctor.cs" />
     <Compile Include="Nurse.cs" />
     <Compile Include="patient.cs" />
+    <Compile Include="PersianCallender.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
