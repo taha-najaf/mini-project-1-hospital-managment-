@@ -13,7 +13,9 @@ namespace mini_project_1_hospital_managment_
         {
             // add persian time
             DateTime now = DateTime.Now;
+            Console.BackgroundColor = ConsoleColor.Magenta;
             Console.WriteLine(now.ToPersianDateTime());
+            Console.BackgroundColor = ConsoleColor.Black;
             //===============
             int d=2,n=2,p=0;//d for doctor,n for nurses ,p for patient counter
             //defualt doctors + doctor arr
