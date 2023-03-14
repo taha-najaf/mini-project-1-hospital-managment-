@@ -16,6 +16,7 @@ namespace mini_project_1_hospital_managment_
             this.password = "****";
             this.username = "Admin";
         }
+        
           
     }
 }

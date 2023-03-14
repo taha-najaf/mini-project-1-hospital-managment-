@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace mini_project_1_hospital_managment_
 {
-    public class patient
+    public class Patient
     {
-        public string firstname { get; set; }
-        public string lastname { get; set; }
+        public string firstname= "";
+        public string lastname= "";
         private int id = 0;
         public int Id
         {
@@ -39,6 +39,19 @@ namespace mini_project_1_hospital_managment_
                 if(value < 0)
                     this.room_number = -1 * this.room_number;
             } }
-
+        //public void info(string first, string last,int id,string sick,string doctor,int room)
+        //{
+        //    this.firstname = first;
+        //    this.lastname = last;
+        //    this.id = id;
+        //    this.sickness = sick;
+        //    this.doctor = doctor;
+        //    this.room_number = room;
+        //}
+        public string fullName()
+        {
+            return this.firstname + this.lastname;
+        }
+            
     }
 }
