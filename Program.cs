@@ -31,6 +31,7 @@ namespace mini_project_1_hospital_managment_
                         Console.WriteLine("username or password is wrong");
                     ///========= abilities of admin
                     Console.WriteLine("1.Add a patient(a)\n2.List of patients(p)\n3.List of doctors(d)\n3.List of nurses(n)\n5.Exit(e)");
+                    choose = Console.ReadLine();
                     //========= add patient
                     if (choose == "a")
                     {
@@ -72,11 +73,23 @@ namespace mini_project_1_hospital_managment_
                     else if (choose == "e") { break; }
                 }
                 //====== end doctor menu
+                //======Nurse menu
+                else if(choose=="n")
+                {
+                    Console.WriteLine("1.Treat patient(t)\n2.Exit(e)");
+                    choose= Console.ReadLine();
+                    if(choose=="t")
+                    {
+                        Console.WriteLine("Enter id or name: ");
+                        Console.ReadLine();
+                        Console.WriteLine("patient treat successfully!");
+                    }
+                }
 
 
             }
 
-
+            Console.WriteLine("Thank for using our system!!");
 
 
         }
