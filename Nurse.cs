@@ -27,5 +27,11 @@ namespace mini_project_1_hospital_managment_
                     this.id = value;
             }
         }
+        public Nurse(string firstname, string lastname, int id)
+        {
+            this.firstname = firstname;
+            this.lastname = lastname;
+            this.id = id;
+        }
     }
 }

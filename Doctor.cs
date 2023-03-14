@@ -28,5 +28,13 @@ namespace mini_project_1_hospital_managment_
         }
         public string speciality { get; set; }
         public int record = 0;
+        public Doctor (string firstname, string lastname, int id,string speciality ,int record)
+        {
+            this.firstname = firstname;
+            this.lastname = lastname;
+            this.id = id; 
+            this.speciality = speciality;
+            this.record = record;
+        }
     }
 }
