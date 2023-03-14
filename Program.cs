@@ -10,6 +10,11 @@ namespace mini_project_1_hospital_managment_
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("choose one :");
+            Console.WriteLine("Admin(a)\nDoctor(d)\nNurse(n)");
+            string choose=Console.ReadLine();
+           
+
         }
     }
 }
