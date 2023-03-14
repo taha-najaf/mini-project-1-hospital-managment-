@@ -33,5 +33,9 @@ namespace mini_project_1_hospital_managment_
             this.lastname = lastname;
             this.id = id;
         }
+        public void information_nurses()
+        {
+            Console.WriteLine("fisrt name: {0} ,last name: {1}, National_Code: {2}", firstname, lastname, id);
+        }
     }
 }

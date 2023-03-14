@@ -51,7 +51,7 @@ namespace mini_project_1_hospital_managment_
                         patients[p] = new Patient();
                         Console.WriteLine("First Name: "); patients[p].firstname = Console.ReadLine();
                         Console.WriteLine("Last Name: "); patients[p].lastname = Console.ReadLine();
-                        Console.WriteLine("Id: "); patients[p].Id = int.Parse(Console.ReadLine());
+                        Console.WriteLine("Id: "); patients[p].national_code = int.Parse(Console.ReadLine());
                         Console.WriteLine("Sickness: "); patients[p].sickness = Console.ReadLine();
                         Console.WriteLine("Doctor: "); patients[p].doctor = Console.ReadLine();
                         Console.WriteLine("Room Number"); patients[p].Room_number = int.Parse(Console.ReadLine());
@@ -60,7 +60,12 @@ namespace mini_project_1_hospital_managment_
                     } // list of patient
                     else if (choose == "p")
                     {
+                        for (int i = 0; i < n; i++)
+                        {
+                            Console.WriteLine("patient {0} informations are: ", i + 1);
+                            patients[i].information_patient();
 
+                        }
                     }
                     // add doctor
                     else if(choose=="b")
@@ -74,7 +79,15 @@ namespace mini_project_1_hospital_managment_
                         d++;
                         Console.WriteLine("Doctor added successfully!");
                     }//list of doctor 
-                    else if (choose == "d") { }
+                    else if (choose == "d") 
+                    {
+                        for(int i=0;i<d;i++)
+                        {
+                            Console.WriteLine("doctor {0} informations are: ", i+1);
+                            doctors[i].information_doctors();
+
+                        }
+                    }
                     //add nurse
                     else if (choose=="c")
                     {
@@ -85,10 +98,19 @@ namespace mini_project_1_hospital_managment_
                         n++;
                         Console.WriteLine("Nurse added successfully!");
                     }// list of nurse 
-                    else if (choose == "n") { }
+                    else if (choose == "n") 
+                    {
+                        for (int i = 0; i < n; i++)
+                        {
+                            Console.WriteLine("nurse {0} informations are: ", i + 1);
+                            nurses[i].information_nurses();
+
+                        }
+                    }
+                }
                     else if (choose == "e") { break; }
 
-                }//===== end admin
+                //===== end admin
                 //=====Doctor menu
                 else if (choose == "d")
                 {
@@ -115,7 +137,7 @@ namespace mini_project_1_hospital_managment_
                     choose= Console.ReadLine();
                     if(choose=="t")
                     {
-                        Console.WriteLine("Enter id or name: ");
+                        Console.WriteLine("Enter National_Code or name: ");
                         Console.ReadLine();
                         Console.WriteLine("patient treat successfully!");
                     }

@@ -36,5 +36,9 @@ namespace mini_project_1_hospital_managment_
             this.speciality = speciality;
             this.record = record;
         }
+        public void information_doctors ()
+        {
+            Console.WriteLine ("fisrt name: {0} ,last name: {1}, National_Code: {2},speciality: {3}, record: {4}",firstname,lastname,id,speciality,record);
+        }
     }
 }

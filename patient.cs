@@ -10,20 +10,20 @@ namespace mini_project_1_hospital_managment_
     {
         public string firstname= "";
         public string lastname= "";
-        private int id = 0;
-        public int Id
+        private int National_Code = 0;
+        public int national_code
         {
             get
             {
-                return this.id;
+                return this.National_Code;
 
             }
             set
             {
                 if (value < 0)
-                    this.id = -1 * value;
+                    this.National_Code = -1 * value;
                 else
-                    this.id = value;
+                    this.National_Code = value;
             }
         }
         public string sickness { get; set; }
@@ -39,19 +39,11 @@ namespace mini_project_1_hospital_managment_
                 if(value < 0)
                     this.room_number = -1 * this.room_number;
             } }
-        //public void info(string first, string last,int id,string sick,string doctor,int room)
-        //{
-        //    this.firstname = first;
-        //    this.lastname = last;
-        //    this.id = id;
-        //    this.sickness = sick;
-        //    this.doctor = doctor;
-        //    this.room_number = room;
-        //}
-        public string fullName()
+
+        public void information_patient()
         {
-            return this.firstname + this.lastname;
+            Console.WriteLine("fisrt name: {0} ,last name: {1}, National Code: {2},sickness: {3}, doctor: {4}, room number{5}", firstname, lastname, National_Code, sickness, doctor,room_number);
         }
-            
+
     }
 }
