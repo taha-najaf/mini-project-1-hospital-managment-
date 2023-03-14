@@ -53,7 +53,26 @@ namespace mini_project_1_hospital_managment_
                     else if (choose == "e") { break; }
 
                 }//===== end admin
-               
+                //=====Doctor menu
+                else if (choose == "d")
+                {
+                    Console.WriteLine("1.Visit patient(v)\n2.Prescribe(p)\n3.Exit(e)");
+                    choose = Console.ReadLine();
+                    if (choose == "p")
+                    {
+                        Console.WriteLine("Enter Name or Id: ");
+                        string name = Console.ReadLine();
+                        Console.WriteLine("Write drugs: something");
+                        Console.WriteLine("prescribe successfully!");
+                    }
+                    else if(choose == "v")
+                    {
+                        Console.WriteLine("visit successfully!");
+                    }
+                    else if (choose == "e") { break; }
+                }
+                //====== end doctor menu
+
 
             }
 
