@@ -28,21 +28,11 @@ namespace mini_project_1_hospital_managment_
         }
         public string sickness { get; set; }
         public string doctor { get; set; }
-        private int room_number;
-        public int Room_number { get
-            {
-                return this.room_number;
-            }
-            
-            set
-            { 
-                if(value < 0)
-                    this.room_number = -1 * this.room_number;
-            } }
+        public string Room_number { get; set; }
 
         public void information_patient()
         {
-            Console.WriteLine("fisrt name: {0} ,last name: {1}, National Code: {2},sickness: {3}, doctor: {4}, room number{5}", firstname, lastname, National_Code, sickness, doctor,room_number);
+            Console.WriteLine("fisrt name: {0} ,last name: {1}, National Code: {2},sickness: {3}, doctor: {4}, room number: {5}", firstname, lastname, National_Code, sickness, doctor,Room_number);
         }
 
     }

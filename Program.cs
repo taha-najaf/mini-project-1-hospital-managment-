@@ -70,7 +70,7 @@ namespace mini_project_1_hospital_managment_
                         }
                         for (int i = 0; i < p; i++)
                         {
-                            Console.BackgroundColor = ConsoleColor.DarkCyan;
+                            Console.BackgroundColor = ConsoleColor.DarkGray;
                             Console.WriteLine("Information of patient {0}: ", i + 1);
                             patients[i].information_patient();
 
@@ -82,10 +82,10 @@ namespace mini_project_1_hospital_managment_
                         patients[p] = new Patient();
                         Console.WriteLine("First Name: "); patients[p].firstname = Console.ReadLine();
                         Console.WriteLine("Last Name: "); patients[p].lastname = Console.ReadLine();
-                        Console.WriteLine("Id: "); patients[p].national_code = int.Parse(Console.ReadLine());
+                        Console.WriteLine("National code: "); patients[p].national_code = int.Parse(Console.ReadLine());
                         Console.WriteLine("Sickness: "); patients[p].sickness = Console.ReadLine();
                         Console.WriteLine("Doctor: "); patients[p].doctor = Console.ReadLine();
-                        Console.WriteLine("Room Number"); patients[p].Room_number = int.Parse(Console.ReadLine());
+                        Console.WriteLine("Room Number: "); patients[p].Room_number = Console.ReadLine();
                         p++;
                         Console.BackgroundColor= ConsoleColor.Green;
                         Console.WriteLine("Patient added successfully!");
@@ -172,11 +172,9 @@ namespace mini_project_1_hospital_managment_
                     choose = Console.ReadLine();
                     if (choose == "t")
                     {
-                        Console.WriteLine("Enter National_Code or name: ");
-                        Console.ReadLine();
-                        Console.BackgroundColor = ConsoleColor.Green;
-                        Console.WriteLine("patient treat successfully!");
-                        Console.BackgroundColor = ConsoleColor.Black;
+                        Console.WriteLine("Enter National_Code : ");
+                        int id=int.Parse(Console.ReadLine());
+                        Nurse.treat(id,patients);
                     }
                 }
                 else if (choose == "e")
