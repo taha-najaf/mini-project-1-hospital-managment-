@@ -38,6 +38,7 @@ namespace mini_project_1_hospital_managment_
         {
             Console.WriteLine("fisrt name: {0} ,last name: {1}, National_Code: {2}", firstname, lastname, id);
         }
+        // treat nurse
         public static void treat (int id, Patient[] patients )
         {
             for(int  i = 0; i < patients.Length; i++)

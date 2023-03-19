@@ -158,9 +158,8 @@ namespace mini_project_1_hospital_managment_
                     }
                     else if (choose == "v")
                     {
-                        Console.BackgroundColor = ConsoleColor.Green;
-                        Console.WriteLine("visit successfully!");
-                        Console.BackgroundColor = ConsoleColor.Black;
+                        int id= int.Parse(Console.ReadLine());
+                        Doctor.visit(id, patients);
                     }
                     else if (choose == "e") { break; }
                 }

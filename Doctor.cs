@@ -40,5 +40,34 @@ namespace mini_project_1_hospital_managment_
         {
             Console.WriteLine ("fisrt name: {0} ,last name: {1}, National_Code: {2},speciality: {3}, record: {4}",firstname,lastname,id,speciality,record);
         }
+        public static void visit(int id, Patient[] patients)
+        {
+            for (int i = 0; i < patients.Length; i++)
+            {
+                if (patients != null && patients[i] != null)
+                {
+                    if (id != patients[i].national_code)
+                        Console.WriteLine("The patient was not in the list");
+
+                    else
+                    {
+                        patients[i].Room_number += " was visited! ";
+                        Console.BackgroundColor = ConsoleColor.DarkGreen;
+                        Console.WriteLine("Patient was visited successfully !");
+                        Console.BackgroundColor = ConsoleColor.Black;
+                        break;
+                    }
+                }
+                else
+                {
+                    Console.BackgroundColor = ConsoleColor.Red;
+                    Console.WriteLine("There is no patient in hospital!");
+                    Console.BackgroundColor = ConsoleColor.Black;
+
+                    break;
+                }
+            }
+        }
+       
     }
 }
