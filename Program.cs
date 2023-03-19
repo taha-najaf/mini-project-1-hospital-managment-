@@ -149,15 +149,13 @@ namespace mini_project_1_hospital_managment_
                     choose = Console.ReadLine();
                     if (choose == "p")
                     {
-                        Console.WriteLine("Enter Name or Id: ");
-                        string name = Console.ReadLine();
-                        Console.WriteLine("Write drugs: something");
-                        Console.BackgroundColor = ConsoleColor.Green;
-                        Console.WriteLine("prescribe successfully!");
-                        Console.BackgroundColor = ConsoleColor.Black;
+                        Console.WriteLine("Enter National code: ");
+                        int id= int.Parse(Console.ReadLine());
+                        Doctor.prescribe(id, patients);
                     }
                     else if (choose == "v")
                     {
+                        Console.WriteLine("Enter National code: ");
                         int id= int.Parse(Console.ReadLine());
                         Doctor.visit(id, patients);
                     }
@@ -171,7 +169,7 @@ namespace mini_project_1_hospital_managment_
                     choose = Console.ReadLine();
                     if (choose == "t")
                     {
-                        Console.WriteLine("Enter National_Code : ");
+                        Console.WriteLine("Enter National code : ");
                         int id=int.Parse(Console.ReadLine());
                         Nurse.treat(id,patients);
                     }

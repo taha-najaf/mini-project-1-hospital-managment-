@@ -68,6 +68,34 @@ namespace mini_project_1_hospital_managment_
                 }
             }
         }
-       
+        public static void prescribe(int id, Patient[] patients)
+        {
+            for (int i = 0; i < patients.Length; i++)
+            {
+                if (patients != null && patients[i] != null)
+                {
+                    if (id != patients[i].national_code)
+                        Console.WriteLine("The patient was not in the list");
+
+                    else
+                    {
+                        patients[i].Room_number += " was prescribed! ";
+                        Console.BackgroundColor = ConsoleColor.DarkGreen;
+                        Console.WriteLine("Patient was prescribed successfully !");
+                        Console.BackgroundColor = ConsoleColor.Black;
+                        break;
+                    }
+                }
+                else
+                {
+                    Console.BackgroundColor = ConsoleColor.Red;
+                    Console.WriteLine("There is no patient in hospital!");
+                    Console.BackgroundColor = ConsoleColor.Black;
+
+                    break;
+                }
+            }
+        }
+
     }
 }
