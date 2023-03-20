@@ -40,12 +40,14 @@ namespace mini_project_1_hospital_managment_
         {
             Console.WriteLine ("fisrt name: {0} ,last name: {1}, National_Code: {2},speciality: {3}, record: {4}",firstname,lastname,id,speciality,record);
         }
-        public static void visit(int id, Patient[] patients)
+        public static void visit(Patient[] patients)
         {
             for (int i = 0; i < patients.Length; i++)
             {
                 if (patients != null && patients[i] != null)
                 {
+                    Console.WriteLine("Enter National code: ");
+                    int id = int.Parse(Console.ReadLine());
                     if (id != patients[i].national_code)
                         Console.WriteLine("The patient was not in the list");
 
@@ -68,12 +70,14 @@ namespace mini_project_1_hospital_managment_
                 }
             }
         }
-        public static void prescribe(int id, Patient[] patients)
+        public static void prescribe(Patient[] patients)
         {
             for (int i = 0; i < patients.Length; i++)
             {
                 if (patients != null && patients[i] != null)
                 {
+                    Console.WriteLine("Enter National code: ");
+                    int id = int.Parse(Console.ReadLine());
                     if (id != patients[i].national_code)
                         Console.WriteLine("The patient was not in the list");
 
@@ -81,7 +85,7 @@ namespace mini_project_1_hospital_managment_
                     {
                         patients[i].Room_number += " was prescribed! ";
                         Console.BackgroundColor = ConsoleColor.DarkGreen;
-                        Console.WriteLine("Patient was prescribed successfully !");
+                        Console.WriteLine("Patient was prescribedcribe  successfully !");
                         Console.BackgroundColor = ConsoleColor.Black;
                         break;
                     }

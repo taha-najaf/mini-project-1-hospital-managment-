@@ -149,15 +149,11 @@ namespace mini_project_1_hospital_managment_
                     choose = Console.ReadLine();
                     if (choose == "p")
                     {
-                        Console.WriteLine("Enter National code: ");
-                        int id= int.Parse(Console.ReadLine());
-                        Doctor.prescribe(id, patients);
+                        Doctor.prescribe(patients);
                     }
                     else if (choose == "v")
                     {
-                        Console.WriteLine("Enter National code: ");
-                        int id= int.Parse(Console.ReadLine());
-                        Doctor.visit(id, patients);
+                        Doctor.visit(patients);
                     }
                     else if (choose == "e") { break; }
                 }
@@ -169,9 +165,7 @@ namespace mini_project_1_hospital_managment_
                     choose = Console.ReadLine();
                     if (choose == "t")
                     {
-                        Console.WriteLine("Enter National code : ");
-                        int id=int.Parse(Console.ReadLine());
-                        Nurse.treat(id,patients);
+                        Nurse.treat(patients);
                     }
                 }
                 else if (choose == "e")

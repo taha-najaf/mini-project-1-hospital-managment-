@@ -39,12 +39,14 @@ namespace mini_project_1_hospital_managment_
             Console.WriteLine("fisrt name: {0} ,last name: {1}, National_Code: {2}", firstname, lastname, id);
         }
         // treat nurse
-        public static void treat (int id, Patient[] patients )
+        public static void treat (Patient[] patients )
         {
             for(int  i = 0; i < patients.Length; i++)
             {
                 if (patients != null && patients[i] != null)
                 {
+                    Console.WriteLine("Enter National code : ");
+                    int id = int.Parse(Console.ReadLine());
                     if (id != patients[i].national_code)
                         Console.WriteLine("The patient was not in the list");
 
